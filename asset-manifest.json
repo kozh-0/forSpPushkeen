@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/forSpPushkeen/static/css/main.7c207cc8.css",
-    "main.js": "/forSpPushkeen/static/js/main.580e75ff.js",
+    "main.css": "/forSpPushkeen/static/css/main.68c8f7a9.css",
+    "main.js": "/forSpPushkeen/static/js/main.59cda8ca.js",
     "static/media/topband.jpg": "/forSpPushkeen/static/media/topband.d970060a4c33d64166a7.jpg",
     "index.html": "/forSpPushkeen/index.html",
-    "main.7c207cc8.css.map": "/forSpPushkeen/static/css/main.7c207cc8.css.map",
-    "main.580e75ff.js.map": "/forSpPushkeen/static/js/main.580e75ff.js.map"
+    "main.68c8f7a9.css.map": "/forSpPushkeen/static/css/main.68c8f7a9.css.map",
+    "main.59cda8ca.js.map": "/forSpPushkeen/static/js/main.59cda8ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c207cc8.css",
-    "static/js/main.580e75ff.js"
+    "static/css/main.68c8f7a9.css",
+    "static/js/main.59cda8ca.js"
   ]
 }
