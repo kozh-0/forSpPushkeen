@@ -1,17 +1,18 @@
 
 export default function Preloader() {
     const style = {
-        display: "inline-block",
         position: "relative",
+        left: "50%",
+        display: "inline-block",
         width: "80px",
-        height: "80px"
+        height: "100px"
     }
     const styleDiv = {
         boxSizing: "border-box",
         display: "block",
         position: "absolute",
-        width: "64px",
-        height: "64px",
+        width: "74px",
+        height: "74px",
         margin: "8px",
         border: "8px solid #fff",
         borderRadius: "50%",

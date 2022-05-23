@@ -1,7 +1,7 @@
-import { ADD_POSTS, GET_SINGLE_USER } from "./profileAction";
+import { ADD_POSTS } from "./profileAction";
 
 
-export const profileReducer = (state = [], action) => {
+export const profileReducer = (state = {}, action) => {
     switch (action.type) {
         case ADD_POSTS: {
             return {
@@ -9,12 +9,7 @@ export const profileReducer = (state = [], action) => {
                 posts: action.posts
             };
         }
-        case GET_SINGLE_USER: {
-            return {
-                ...state,
-                userInfo: action.userInfo
-            };
-        }
+
         default: {
             return state;
         }

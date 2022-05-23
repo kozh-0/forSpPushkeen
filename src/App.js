@@ -10,7 +10,7 @@ export default function App() {
 		<Header/>
 			<Routes>
 				<Route path="/forSpPushkeen" element={ <Main/> }/>
-				<Route path="/forSpPushkeen/userpage/:name" element={ <ProfilePage/> }/>
+				<Route path="/forSpPushkeen/userpage/:userId/:name" element={ <ProfilePage/> }/>
 			</Routes>
 		<Footer/>
 

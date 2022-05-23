@@ -2,20 +2,20 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom"
 import { loadPostsThunk } from "../Redux/profile/profileAction";
-import { loadUsersThunk, resetUsers } from "../Redux/users/usersActions";
+import { loadUsersThunk } from "../Redux/users/usersActions";
 
 export default function MainTickets() {
     const users = useSelector(state => state.users);
     const dispatch = useDispatch();
-
+    const ls = localStorage.getItem('persist:root');
     
     useEffect(() => {
-        dispatch(loadUsersThunk());
+        if (!ls || String(ls).length < 100) {
+            dispatch(loadUsersThunk());
+            dispatch(loadPostsThunk());
+        }
         
-        // return () => dispatch(resetUsers)
-        // eslint-disable-next-line
-        // if (!data.length) document.querySelector('.tickets_users').style.overflowX = "unset";
-    }, [dispatch])
+    }, [dispatch, ls])
     
     return (
         <div>
@@ -31,10 +31,9 @@ export default function MainTickets() {
                             <h4>{el.name}</h4>
                             <p>{el.city}</p>
                         </div>
-                        <Link to={`/forSpPushkeen/userpage/${el.name}`}>
+                        <Link to={`/forSpPushkeen/userpage/${el.id}/${el.name}`}>
                             <button 
                                 className="main_black_btn"
-                                onClick={() => dispatch(loadPostsThunk(el.id))}
                             >Смотреть профиль</button>
                         </Link>
                     </div>

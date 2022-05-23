@@ -1,31 +1,26 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux";
-import { loadPostsThunk } from "../Redux/profile/profileAction";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
 
 export default function ProfilePosts() {
-    const dispatch = useDispatch();
+    const {userId} = useParams();
+    const posts = useSelector(state => state.profile.posts.filter(el => el.userId === +userId));
 
-    const posts = useSelector(state => state.profile.posts);
-    console.log(posts);
-
-    useEffect(() => {
-        dispatch(loadPostsThunk(1));
-
-    }, [dispatch])
-
+    const firstLetterToUpperCase = (str) => str[0].toUpperCase() + str.slice(1);
     return (
         <div className="user_posts">
             <div className="container">
                 <h3>Посты</h3>
                 <div className="user_posts_bunch">
-                    {posts.length ? posts.map(el => (
+                    {posts.length && posts.slice(0,2).map(el => (
                         <div key={el.title} className="user_posts_bunch_item">
-                            <h4>{el.title}</h4>
-                            <p>{el.body}</p>
+                            <div>
+                                <h4>{firstLetterToUpperCase(el.title)}</h4>
+                                <h5>{new Date().toLocaleDateString()}</h5>
+                            </div>
+                            <p>{firstLetterToUpperCase(el.body)}</p>
                         </div>
-
-                    )) : null}
+                    ))}
                 </div>
             </div>
         </div>
