@@ -1,5 +1,4 @@
 import MainAbout from "./Main/About";
-
 import MainTickets from "./Main/MainTickets";
 import MainTop from "./Main/MainTop";
 

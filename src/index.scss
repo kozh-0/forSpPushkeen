@@ -73,8 +73,10 @@ body {
   max-width: 1060px;
   margin: 0 auto;
 }
+
+// ИЗМЕНИЛ ВАЖНО АЛО ТУТ ПОМЕНЯЙ ПРИЖМИ ФУТЕР МАТЕМАТИКА РАСЧЕТЫ КАЛК АЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕ
 .content{
-  height: calc(100vh - 70px - 50px);
+  // height: calc(100vh - 70px - 50px);
   padding: 20px 0;
 }
 
@@ -315,7 +317,7 @@ h3 {
   }
 }
 
-// FOOTER ==================================================
+// USER ==================================================
 
 .user_info {
   &_inner div {
@@ -329,10 +331,37 @@ h3 {
 
 
 
+.user_posts {
+
+  &_bunch{
+    // @extend %flex_center;
+
+
+    
+    &_item {
+      width: 49%;
+      border: solid 1px #000;
+      padding: 20px;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // FOOTER ==================================================
-
 footer {
   background-color: #333;
   color: white;
@@ -346,4 +375,10 @@ footer {
       color: white;
     }
   }
+}
+
+// PRELOADER ========================================================
+@keyframes lds-ring {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
 }

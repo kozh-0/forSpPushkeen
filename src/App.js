@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./Components/Help/Footer";
 import Header from "./Components/Help/Header";
 import Main from "./Components/Main";
-import UserPage from "./Components/UserPage";
+import ProfilePage from "./Components/ProfilePage";
 
 export default function App() {
   	return (
@@ -10,7 +10,7 @@ export default function App() {
 		<Header/>
 			<Routes>
 				<Route path="/forSpPushkeen" element={ <Main/> }/>
-				<Route path="/forSpPushkeen/userpage/:id/:name" element={ <UserPage/> }/>
+				<Route path="/forSpPushkeen/userpage/:name" element={ <ProfilePage/> }/>
 			</Routes>
 		<Footer/>
 
