@@ -11,7 +11,10 @@ export default function ProfileInfo() {
         <div className="user_info">
             <div className="user_info_inner container">
                 <div className="user_info_inner_basic">
-                    <h3>{user.name}</h3>
+                    <div>
+                        <img src="https://img.icons8.com/external-others-cattaleeya-thongsriphong/344/external-User-male-avatar-blue-others-cattaleeya-thongsriphong-2.png" alt="user" />
+                        <h3>{user.name}</h3>
+                    </div>
                     <div>
                         <p>Website: {user.website}</p> 
                         <p>Company: {user.company.name}</p> 
@@ -27,10 +30,7 @@ export default function ProfileInfo() {
                     <div className="user_info_inner_splitter"></div>
                     <div><a href={`tel:${user.phone}`}>{user.phone}</a></div>
 
-                    <div className="user_info_inner_splitter"></div>
                     <button className="main_black_btn">Написать сообщение</button>
-
-                    <div className="user_info_inner_splitter"></div>
                     <button className="main_black_btn">Предложить сходить на концерт</button>
                 </div>
             </div>

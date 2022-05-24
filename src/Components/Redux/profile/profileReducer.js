@@ -1,4 +1,4 @@
-import { ADD_POSTS } from "./profileAction";
+import { ADD_COMMENTS, ADD_POSTS, RESET_COMMENTS } from "./profileAction";
 
 
 export const profileReducer = (state = {}, action) => {
@@ -7,6 +7,18 @@ export const profileReducer = (state = {}, action) => {
             return {
                 ...state,
                 posts: action.posts
+            };
+        }
+        case ADD_COMMENTS: {
+            return {
+                ...state,
+                comments: action.comments
+            };
+        }
+        case RESET_COMMENTS: {
+            return {
+                ...state,
+                comments: []
             };
         }
 

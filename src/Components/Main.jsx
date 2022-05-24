@@ -5,12 +5,12 @@ import MainTop from "./Main/MainTop";
 
 export default function Main() {
     return (
-        <>
+        <main className="content" style={{paddingTop: '0'}}>
             <MainTop/>
-            <main className="container">
+            <div className="container">
                 <MainTickets/>
                 <MainAbout/>
-            </main>
-        </>
+            </div>
+        </main>
   )
 }
