@@ -14,6 +14,11 @@ export const loadUsersThunk = () => (dispatch, _, axios) => {
                 city: el.address.city,
                 email: el.email,
                 phone: el.phone,
+                website: el.website,
+                company: {
+                    name: el.company.name,
+                    bs: el.company.bs
+                }
             })))
         .then(users => dispatch(addUsers(users)))
 }

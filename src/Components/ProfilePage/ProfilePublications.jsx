@@ -7,7 +7,8 @@ import Preloader from '../Help/Preloader';
 export default function ProfilePublications() {
     const {userId} = useParams();
     const [pics, setPics] = useState([]);
-    console.log(userId);
+
+    
     useEffect(() => {
         axios('https://jsonplaceholder.typicode.com/photos')
             .then(({data}) => data.splice(data.length - 20))

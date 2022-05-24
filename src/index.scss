@@ -234,8 +234,18 @@ h3 {
 // ABOUT ==================================================
 
 
-
-
+// .custom_scroll
+::-webkit-scrollbar{
+    width: 10px}
+  
+::-webkit-scrollbar-track{
+    background: #b1b1b1;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+  }
+::-webkit-scrollbar-thumb{
+    background: #0d1e4b;
+  }
 
 
 
@@ -324,8 +334,26 @@ h3 {
   border: 1px solid black;
 
   &_inner {
-    .rooftop {border: 1px solid #000}
-    div {
+
+    &_basic {
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      @extend %flex_center;
+      p {
+        font-size: 16px;
+      }
+
+      div {
+        padding: 15px;
+        font-size: 18px;
+        line-height: 22px;
+        border-left: 1px solid black;
+      }
+    }
+
+
+    &_rooftop {
+      border: 1px solid #000;
       display: flex;
       justify-content: space-around;
       align-content: stretch;
@@ -344,10 +372,7 @@ h3 {
       height: 100%;
       width: 1px;
     }
-
-
   }
-  
 }
 
 
@@ -363,12 +388,17 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    flex-wrap: wrap;
 
+    max-height: 300px;
+    overflow-y: scroll;
+    margin: 15px 0;
+    padding-right: 10px;
     
     &_item {
+      margin-top: 20px;
       div {
         @extend %flex_center;
-        
         padding: 0 0 7px;
       }
 
@@ -389,13 +419,11 @@ h3 {
       }
     }
   }
-
 }
 
 
 
 
-// PUBLICATIONS ============================================================
 
 .user_publications {
   margin-bottom: 20px;
@@ -406,7 +434,6 @@ h3 {
       width: 154px;
       // background-color: blue;
     }
-
   }
 }
 

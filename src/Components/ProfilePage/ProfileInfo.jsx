@@ -10,8 +10,16 @@ export default function ProfileInfo() {
     return (
         <div className="user_info">
             <div className="user_info_inner container">
-                <h3 style={{borderLeft: "1px solid #000"}}>{user.name}</h3>
-                <div className="rooftop">
+                <div className="user_info_inner_basic">
+                    <h3>{user.name}</h3>
+                    <div>
+                        <p>Website: {user.website}</p> 
+                        <p>Company: {user.company.name}</p> 
+                        <p>Business: {user.company.bs}</p> 
+                    </div>
+                </div>
+
+                <div className="user_info_inner_rooftop">
                     <div>{user.city}</div>
                     <div className="user_info_inner_splitter"></div>
                     <div><a href={`mailto:${user.email}`}>{user.email}</a></div>

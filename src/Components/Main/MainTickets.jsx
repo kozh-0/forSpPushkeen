@@ -6,14 +6,16 @@ import { loadUsersThunk } from "../Redux/users/usersActions";
 
 export default function MainTickets() {
     const users = useSelector(state => state.users);
+    const posts = useSelector(state => state.profile.posts);
     const dispatch = useDispatch();
     const ls = localStorage.getItem('persist:root');
     
+    console.log("from main", posts);
     useEffect(() => {
-        if (!ls || String(ls).length < 100) {
-            dispatch(loadUsersThunk());
-            dispatch(loadPostsThunk());
-        }
+        // if (!ls || String(ls).length < 200) {
+        // }
+        dispatch(loadUsersThunk());
+        dispatch(loadPostsThunk());
         
     }, [dispatch, ls])
     
