@@ -1,0 +1,48 @@
+%flex_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_top {
+    box-shadow: 0px -50px 19px -2px rgba(0, 0, 0, 0.5) inset;
+    height: 439px;
+    background: #000 url(../../../img/topband.jpg) center center/cover no-repeat;
+    // background: #000 url(img/topband.jpg) center center no-repeat;
+    color: white;
+    text-align: center;
+    &_textarea {
+      padding: 130px 0;
+      background: radial-gradient(50% 40% at 50% 60%, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      font-family: 'Alegreya Sans SC';
+      font-style: normal;
+      font-weight: 700;
+      h1 {
+        font-size: 50px;
+        line-height: 60px;
+      }
+      h2 {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+  
+  
+  
+    &_slider {
+      @extend %flex_center;
+      button {
+        margin-right: 0;
+      }
+    }
+    .slider_button {
+      width: 40px;
+      height: 40px;
+      border: 1px solid white;
+      font-size: 24px;
+      user-select: none;   
+      span {
+        vertical-align: text-bottom;
+      }
+    }
+  }

@@ -1,0 +1,45 @@
+%flex_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tickets {
+    &_info {
+      @extend %flex_center;
+      padding-top: 15px;
+    }
+  
+    &_users {
+      margin-top: 7px;
+      @extend %flex_center;
+      overflow-x: scroll;
+      &::-webkit-scrollbar{height: 15px}
+  
+  
+  
+      &_person {
+        width: 239px;
+        height: 143px;
+        border: 1px solid #000000;
+        padding: 15px;
+        margin-right: 10px;
+        &:last-child{margin: 0}
+  
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h4 {
+          font-size: 17px;
+          line-height: 23px;
+          text-transform: capitalize;
+        }
+        p {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          color: rgba(0, 0, 0, 0.41);
+        }
+      }
+    }
+  }

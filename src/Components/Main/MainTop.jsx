@@ -1,3 +1,4 @@
+import './scss/MainTop.scss';
 
 export default function MainTop() {
     return (

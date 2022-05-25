@@ -1,0 +1,13 @@
+
+.user_publications {
+    margin-bottom: 20px;
+    &_bunch {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      &_item {
+        height: 154px;
+        width: 154px;
+      }
+    }
+}

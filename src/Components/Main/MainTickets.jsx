@@ -1,7 +1,10 @@
+import './scss/MainTickets.scss';
+
+
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom"
-import { loadPostsThunk } from "../../Redux/profile/profileAction";
+// import { loadPostsThunk } from "../../Redux/profile/profileAction";
 import { loadUsersThunk } from "../../Redux/users/usersActions";
 
 export default function MainTickets() {
@@ -14,7 +17,7 @@ export default function MainTickets() {
     useEffect(() => {
         // if (!ls || String(ls).length < 200) {  }
         dispatch(loadUsersThunk());
-        dispatch(loadPostsThunk());
+        // dispatch(loadPostsThunk());
         
     }, [dispatch, ls])
     

@@ -1,3 +1,4 @@
+import './_help.scss';
 
 export default function Preloader() {
     const style = {
