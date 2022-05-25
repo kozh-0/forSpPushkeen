@@ -21,7 +21,7 @@ export default function ProfilePublications() {
             <div className="container">
                 <h3>Публикации</h3>
                 <div className="user_publications_bunch">
-                    {pics.length ? pics.map(el => (
+                    {pics?.length ? pics.map(el => (
                         <div 
                             style={{background: `url(${el.thumbnailUrl})`}}
                             key={el.title} 

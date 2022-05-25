@@ -20,7 +20,7 @@ export default function ProfilePosts() {
             <div className="container">
                 <h3 style={{paddingBottom: '0'}}>Посты</h3>
                 <div className="user_posts_bunch">
-                    {posts.length ? posts.map(el => (
+                    {posts?.length ? posts.map(el => (
                         <div key={el.title} className="user_posts_bunch_item">
                             <div>
                                 <h4>{firstLetterToUpperCase(el.title)}</h4>

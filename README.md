@@ -1,5 +1,7 @@
 # Тестовое задание для https://pushkeen.ru/
 
+[Try demo](https://kozh-0.github.io/forSpPushkeen/)
+
 Стек:  
 языки - JavaScript/TypeScript.  
 Фреймворк - React/Vue/Angular, state-management на ваш выбор  

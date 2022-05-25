@@ -7,6 +7,8 @@ import Modal from "./Modal/Modal";
 
 
 export default function UserPosts() {
+    // document.documentElement.scrollTop = 0;
+
 
     const [modalActive, setModalActive] = useState(false);
 
@@ -44,7 +46,7 @@ export default function UserPosts() {
                 <h3>Комментарии</h3>
 
                 <div className="comments_bunch">
-                    {comments.length ? comments.map(el => (
+                    {comments?.length ? comments.map(el => (
                         <div key={el.id} className="comments_bunch_item">
                             <div>
                                 <h4>{firstLetterToUpperCase(el.name)}</h4>

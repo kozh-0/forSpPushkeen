@@ -26,7 +26,7 @@ export default function MainTickets() {
             </div>
 
             <div className="tickets_users">
-                {users.length ? users.map(el => (
+                {users?.length ? users.map(el => (
                     <div key={el.name} className="tickets_users_person">
                         <div>
                             <h4>{el.name}</h4>
