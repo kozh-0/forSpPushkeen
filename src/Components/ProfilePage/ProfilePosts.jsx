@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import Preloader from "../Help/Preloader";
-import { loadPostsThunk } from "../Redux/profile/profileAction";
+import { loadPostsThunk } from "../../Redux/profile/profileAction";
 
 
 export default function ProfilePosts() {

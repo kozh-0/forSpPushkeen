@@ -1,11 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom"
-import { loadPostCommentsThunk, resetComments } from "./Redux/profile/profileAction";
+import { loadPostCommentsThunk, resetComments } from "../Redux/profile/profileAction";
 import Preloader from './Help/Preloader';
+import Modal from "./Modal/Modal";
 
 
 export default function UserPosts() {
+
+    const [modalActive, setModalActive] = useState(false);
+
+
     const { name, postId } = useParams();
     const dispatch = useDispatch();
     const userPost = useSelector(state => state.profile.posts.find(el => el.id === +postId));
@@ -52,8 +57,12 @@ export default function UserPosts() {
                 </div>
 
 
-                <button className="main_black_btn">Оставить комментарий</button>
-                
+                <button 
+                    onClick={() => setModalActive(true)}
+                    className="main_black_btn"
+                    style={{width: '250px', height: '50px', fontSize: '18px', position: 'relative', left: '69%', margin: '20px 0'}}
+                >Оставить комментарий</button>
+                <Modal active={modalActive} setActive={setModalActive}/>
 
             </div>
         </main>
