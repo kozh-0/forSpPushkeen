@@ -38,7 +38,7 @@ export default function ProfilePosts() {
                             </div>
                             <p>{firstLetterToUpperCase(el.body)}</p>
                             <Link to={`/forSpPushkeen/userpage/${userId}/${name}/comments/${el.id}`}>
-                                <button className="main_black_btn">Детали</button>
+                                <button className="main_black_btn">Подробнее</button>
                             </Link>
                         </div>
                     )) : <Preloader/>}

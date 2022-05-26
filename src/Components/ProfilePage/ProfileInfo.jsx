@@ -19,11 +19,13 @@ export default function ProfileInfo() {
                             <h3>{user.name}</h3>
                         </div>
                         <div>
-                            <p>Website: {user.website}</p> 
+                            <a href={`https://www.${user.website}`}><p>Website: {user.website}</p></a> 
                             <p>Company: {user.company.name}</p> 
                             <p>Business: {user.company.bs}</p> 
                         </div>
                     </div>
+                    
+                    <div className='fullscreen_splitter'></div>
 
                     <div className="user_info_inner_rooftop">
                         <div>{user.city}</div>
@@ -32,13 +34,13 @@ export default function ProfileInfo() {
 
                         <div className="user_info_inner_splitter"></div>
                         <div><a href={`tel:${user.phone}`}>{user.phone}</a></div>
-                        <div>
+                        <div className='user_info_inner_rooftop_buttons_group'>
                             <button className="main_black_btn">Написать сообщение</button>
                             <button className="main_black_btn">Предложить сходить на концерт</button>
                         </div>
                     </div>
                 </div>
-            ) : <h3>Что-то пошло не так, попробуйте начать с начальной страницы</h3>}
+            ) : <h3>Что-то пошло не так, попробуйте с начальной страницы</h3>}
         </div>
     )
 }

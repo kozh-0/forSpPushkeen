@@ -1,8 +1,7 @@
 export const ADD_POSTS = "ADD_POSTS";
-export const GET_SINGLE_USER = "GET_SINGLE_USER";
-export const RESET_SINGLE_USER = "RESET_SINGLE_USER";
 export const ADD_COMMENTS = "ADD_COMMENTS";
 export const RESET_COMMENTS = "RESET_COMMENTS";
+export const ADD_USER_POST_COMMENT = "ADD_USER_POST_COMMENT";
 
 
 // Posts
@@ -31,3 +30,9 @@ export const loadPostCommentsThunk = (postId) => (dispatch, _, axios) => {
         .then(({data}) => data.filter(el => el.postId === postId))
         .then(comments => dispatch(addComments(comments)))
 };
+
+// Comment POST via Modal
+export const addUserComment = POSTcomment => ({
+    type: ADD_USER_POST_COMMENT,
+    POSTcomment
+})

@@ -1,9 +1,12 @@
 import "./Modal.scss";
 import { useState } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addUserComment } from "../../Redux/profile/profileAction";
 
 export default function ModalComment({active, setActive}) {
 
+    const dispatch = useDispatch();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [comment, setComment] = useState('');
@@ -18,9 +21,10 @@ export default function ModalComment({active, setActive}) {
             axios.post('https://jsonplaceholder.typicode.com/comments', {
                 name,
                 email,
-                comment
+                body: comment
             })
-            .then(({data}) => console.log(data))
+            .then(({data}) => dispatch(addUserComment(data)))
+            .then(({POSTcomment}) => console.log(POSTcomment))
             .catch(err => console.log(err));
 
         setIsSent(true);
@@ -61,7 +65,6 @@ export default function ModalComment({active, setActive}) {
                                 onChange={(e) => setComment(e.target.value)}
                             />
                         </div>
-                        <br />
                         <button className="main_black_btn" onClick={(e) => postComment(e)}>Отправить</button>
                     </form>
                 ) : <h3>Сообщение отправлено <span style={{color: 'green'}}>&#10004;</span></h3>}

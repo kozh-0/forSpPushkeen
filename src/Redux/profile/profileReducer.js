@@ -1,4 +1,4 @@
-import { ADD_COMMENTS, ADD_POSTS, RESET_COMMENTS } from "./profileAction";
+import { ADD_COMMENTS, ADD_POSTS, RESET_COMMENTS, ADD_USER_POST_COMMENT } from "./profileAction";
 
 const initialState = {
     posts: [],
@@ -17,6 +17,12 @@ export const profileReducer = (state = initialState, action) => {
             return {
                 ...state,
                 comments: action.comments
+            };
+        }
+        case ADD_USER_POST_COMMENT: {
+            return {
+                ...state,
+                comments: [...state.comments, action.POSTcomment]
             };
         }
         case RESET_COMMENTS: {

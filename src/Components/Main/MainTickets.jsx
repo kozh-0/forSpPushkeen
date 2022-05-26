@@ -25,7 +25,7 @@ export default function MainTickets() {
         <div>
             <div className="tickets_info">
                 <h3>Купили билеты</h3>
-                <h2>932/1000</h2>
+                <h2>932/<span style={{color: "#E0E0E0"}}>1000</span></h2>
             </div>
 
             <div className="tickets_users">

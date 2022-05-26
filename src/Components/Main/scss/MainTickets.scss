@@ -8,6 +8,16 @@
     &_info {
       @extend %flex_center;
       padding-top: 15px;
+
+      h2 {
+        font-family: "Alegreya Sans SC";
+font-size: 35px;
+font-weight: 500;
+line-height: 40px;
+letter-spacing: 0em;
+text-align: left;
+
+      }
     }
   
     &_users {
@@ -19,13 +29,15 @@
   
   
       &_person {
-        width: 239px;
+        // width: 239px;
         height: 143px;
-        border: 1px solid #000000;
+        border: 1px solid #E0E0E0;
         padding: 15px;
         margin-right: 10px;
+
         &:last-child{margin: 0}
-  
+        div {width: 217px}
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -33,6 +45,7 @@
           font-size: 17px;
           line-height: 23px;
           text-transform: capitalize;
+          // width: 400px;
         }
         p {
           font-weight: 400;

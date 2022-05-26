@@ -29,8 +29,8 @@ export default function UserPosts() {
     return (
         <main className="container">
             <div className="content">
+                <h3>{name}</h3>
                 <div className="comments_post">
-                    <h3 style={{width: 'unset'}}>{name} пишет</h3>
                     <div>
                         <h2>{firstLetterToUpperCase(userPost.title)}</h2>
                         <p>{new Date().toLocaleDateString()}</p>
@@ -39,7 +39,7 @@ export default function UserPosts() {
                     <p>{firstLetterToUpperCase(userPost.body)}</p>
                 </div>
                 
-                <h3>Комментарии</h3>
+                <p style={{fontSize: '20px'}}>Комментарии</p>
 
                 <div className="comments_bunch">
                     {comments?.length ? comments.map(el => (
