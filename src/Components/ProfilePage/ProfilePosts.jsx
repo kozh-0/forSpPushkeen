@@ -1,6 +1,6 @@
 import './scss/ProfilePosts.scss';
 
-import { useEffect/* , useState */ } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import Preloader from "../Help/Preloader";
@@ -9,27 +9,24 @@ import { loadPostsThunk } from "../../Redux/profile/profileAction";
 
 export default function ProfilePosts() {
     const { userId, name } = useParams();
-    const posts = useSelector(state => state.profile.posts.filter(el => el.userId === +userId));
     const dispatch = useDispatch();
+    const posts = useSelector(state => state.profile.posts.filter(el => el.userId === +userId));
 
-    // const [overFlowY, setOverFlowY] = useState(true)
+    const [isOverflow, setisOverflow] = useState(true);
+
     
     const firstLetterToUpperCase = (str) => str[0].toUpperCase() + str.slice(1);
-
-
-    // onClick={setOverFlowY(!overFlowY)}
+    
+    // loads posts
     useEffect(() => {
-        dispatch(loadPostsThunk());
-    }, [dispatch])
+        posts.length && dispatch(loadPostsThunk());
+    }, [dispatch, posts.length])
 
     return (
         <div className="user_posts">
             <div className="container" >
                 <h3 style={{paddingBottom: '0'}}>Посты</h3>
-                <div 
-                    className="user_posts_bunch" 
-                    // style={overFlowY ? {height: '300px',minHeight: 'none'} : {height: 'none',minHeight: '300px'}}
-                >
+                <div className={isOverflow ? "user_posts_bunch overflow_active" : "user_posts_bunch"}>
                     {posts?.length ? posts.map(el => (
                         <div key={el.title} className="user_posts_bunch_item">
                             <div>
@@ -43,7 +40,7 @@ export default function ProfilePosts() {
                         </div>
                     )) : <Preloader/>}
                 </div >
-                    {/* <div onClick={setOverFlowY(!overFlowY)}>Развернуть</div> */}
+                <div onClick={() => setisOverflow(!isOverflow)} className='user_posts_collapsible'></div>
             </div>
         </div>
     )
