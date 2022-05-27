@@ -12,6 +12,7 @@ const addPosts = (posts) => ({
 export const loadPostsThunk = () => (dispatch, _, axios) => {
     axios("https://jsonplaceholder.typicode.com/posts")
         .then(({data}) => dispatch(addPosts(data)))
+        .catch(err => console.log(err))
 };
 
 
@@ -29,6 +30,7 @@ export const loadPostCommentsThunk = (postId) => (dispatch, _, axios) => {
     axios("https://jsonplaceholder.typicode.com/comments")
         .then(({data}) => data.filter(el => el.postId === postId))
         .then(comments => dispatch(addComments(comments)))
+        .catch(err => console.log(err))
 };
 
 // Comment POST via Modal

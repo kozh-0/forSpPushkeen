@@ -16,10 +16,10 @@ export default function MainTickets() {
     // console.log("from main", posts);
     useEffect(() => {
         // if (!ls || String(ls).length < 200) {  }
-        dispatch(loadUsersThunk());
+        !users.length && dispatch(loadUsersThunk());
         // dispatch(loadPostsThunk());
         
-    }, [dispatch, ls])
+    }, [dispatch, ls, users.length])
     
     return (
         <div>

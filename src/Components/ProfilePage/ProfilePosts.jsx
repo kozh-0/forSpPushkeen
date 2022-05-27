@@ -19,7 +19,7 @@ export default function ProfilePosts() {
     
     // loads posts
     useEffect(() => {
-        posts.length && dispatch(loadPostsThunk());
+        !posts.length && dispatch(loadPostsThunk());
     }, [dispatch, posts.length])
 
     return (
