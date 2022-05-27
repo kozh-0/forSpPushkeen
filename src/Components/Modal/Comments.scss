@@ -18,6 +18,15 @@
       div {
         @extend %flex_center;
         margin-bottom: 10px !important;
+        
+      }
+      p {
+        text-indent: 25px;
+        line-height: 25px;
+      }
+      &_splitter {
+        height: 2px;
+        background: brown;
       }
     }
   
@@ -25,16 +34,25 @@
     &_bunch {
   
       &_item {
-        margin: 10px 0;
-        padding: 10px;
+        margin: 20px 0;
         border:1px solid #E0E0E0;
-        border-radius: 4px;
-    
+        border-top: none;
+        border-radius: 10px;
+        
         font-weight: 400;
         line-height: 17px;
-    
+        
         div {
           @extend %flex_center;
+          padding: 10px;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          background: #E0E0E0;
+        }
+        p {
+          padding: 20px;
+          text-indent: 25px;
+          line-height: 20px;
         }
       }
     }
@@ -44,7 +62,7 @@
       height: 50px;
       font-size: 15px;
       position: relative;
-      left: 78%;
+      left: 78.6%;
       margin: 20px 0;
     }
 

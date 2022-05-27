@@ -28,15 +28,20 @@
         font-size: 20px;
         font-weight: 500;
     }
-    width: 500px;
     form {
-        h2 {text-align: right}
+        h3 {
+            text-align: right;
+            font-size: 30px;
+            padding: 0;
+            line-height: 15px;
+        }
         input {
             height: 30px;
             width: 100%;
-            &:nth-child(3) {
-                height: 200px;
-            }
+            font-family: 'Open Sans';
+            font-size: 14px;
+            border-radius: 5px;
+
         }
         textarea {
             width: -webkit-fill-available;
@@ -44,6 +49,9 @@
             resize: none;
             font-family: 'Open Sans';
             font-size: 14px;
+            border-radius: 5px;
+            width: 440px;
+
         }
         
     }

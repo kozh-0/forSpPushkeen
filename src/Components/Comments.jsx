@@ -35,7 +35,7 @@ export default function UserPosts() {
                         <h2>{firstLetterToUpperCase(userPost.title)}</h2>
                         <p>{new Date().toLocaleDateString()}</p>
                     </div>
-                    <hr />
+                    <div className='comments_post_splitter'></div>
                     <p>{firstLetterToUpperCase(userPost.body)}</p>
                 </div>
                 
@@ -48,7 +48,6 @@ export default function UserPosts() {
                                 <h4>{firstLetterToUpperCase(el.name)}</h4>
                                 <a href={`mailto:${el.email}`}>{el.email}</a>
                             </div>
-                            <hr />
                             <p>{firstLetterToUpperCase(el.body)}</p>
                         </div>
                     )) : <Preloader/>}

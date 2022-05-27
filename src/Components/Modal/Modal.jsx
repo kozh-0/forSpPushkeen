@@ -36,7 +36,7 @@ export default function ModalComment({active, setActive}) {
             <div className="modal_content" onClick={e => e.stopPropagation()}>
                 {!isSent ? (
                     <form>
-                        <h2>Оставить комментарий</h2> 
+                        <h3>Оставить комментарий</h3> 
                         <div className="modal_content_input">
                             <p style={name ? {color:'green'} : {color: 'red'}}>Имя</p>
                             <input 
